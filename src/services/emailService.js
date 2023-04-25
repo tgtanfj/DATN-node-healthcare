@@ -82,6 +82,9 @@ let getBodyHTMLEMAILRemedy = (dataSend) => {
         <h3>Xin chào ${dataSend.patientName}!</h3>
         <p>Xin cảm ơn bạn đã đặt lịch khám tại HealthCare.</p>
         <p>Thông tin đơn thuốc và hóa đơn được gửi trong file đính kèm bênh dưới.</p>
+        <p>Thông tin đơn thuốc:</p>
+        <div style="font-style: italic; margin-left: 50px" >${dataSend.medicine}</div>
+        <br/>
         <div>Xin chân thành cảm ơn quý khách đã sử dụng dịch vụ tại HealthCare!</div>
         `
     }
@@ -91,6 +94,9 @@ let getBodyHTMLEMAILRemedy = (dataSend) => {
         <h3>Dear ${dataSend.patientName}!</h3>
         <p>Thank you for booking an appointment at HealthCare.</p>
         <p>Prescription information and invoices are sent in the attached file!</p>
+        <p>Prescription information:</p>
+        <div style="font-style: italic; margin-left: 50px" >${dataSend.medicine}</div>
+        <br/>
         <div>Thank you very much for using the service at HealthCare!</div>
         `
     }

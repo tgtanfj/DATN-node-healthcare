@@ -499,7 +499,7 @@ let searchDoctorByName = (nameDoctor) => {
                     raw: false,
                     nest: true
                 })
-                if (!doctor) {
+                if (doctor == [] || doctor == '' || !doctor || doctor == null || doctor == undefined || doctor == {} || doctor == [[]]) {
                     resolve({
                         errCode: -2,
                         errMessage: "Bác sĩ không hợp lệ!"
@@ -508,7 +508,8 @@ let searchDoctorByName = (nameDoctor) => {
                     arrDoctor.push(doctor)
                     resolve({
                         errCode: 0,
-                        data: arrDoctor
+                        data: arrDoctor,
+                        doctor: doctor
                     })
                 }
             }
